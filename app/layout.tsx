@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 
 import NavBar from "./Components/NavBar/NavBar";
 
+import RegisterModal from "./Components/Modal/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
+
 export const metadata: Metadata = {
   title: "Airbnb_clone",
   description: "Airbnb_clone",
@@ -22,6 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <ToasterProvider />
+        <RegisterModal />
         <NavBar />
         {children}
       </body>
