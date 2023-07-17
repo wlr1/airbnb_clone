@@ -20,7 +20,7 @@ const RegisterModal = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FieldValues>({
-    defaultValue: {
+    defaultValues: {
       name: "",
       email: "",
       password: "",
